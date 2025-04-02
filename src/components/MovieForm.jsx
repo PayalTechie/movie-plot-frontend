@@ -9,7 +9,8 @@ const MovieForm = ({ setPlot }) => {
     if (!input) return;
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:5000/generate", { prompt: input }); 
+      const backendURL = import.meta.env.VITE_BACKEND_URL;
+      const response = await axios.post(`${backendURL}/generate`, { prompt: input }); 
       console.log("Backend Response:", response.data); 
       setPlot(response.data.response);
     } catch (error) {
