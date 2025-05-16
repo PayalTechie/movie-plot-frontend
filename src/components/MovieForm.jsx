@@ -9,13 +9,7 @@ const MovieForm = ({ setPlot }) => {
     if (!input) return;
     setLoading(true);
     try {
-      const backendURL = import.meta.env.VITE_BACKEND_URL;
-      const response = await axios.post(`${backendURL}/generate`, { prompt: input }); 
-      console.log("Backend Response:", response.data); 
-      setPlot(response.data.response);
-    } catch (error) {
-      console.error("Error generating plot:", error);
-      setPlot("Failed to generate plot. Try again!");
+     //changes here
     }
     setLoading(false);
   };
