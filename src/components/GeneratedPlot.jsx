@@ -9,21 +9,7 @@ const GeneratedPlot = ({ plot }) => {
 
   useEffect(() => {
     if (plot) {
-      let i = 0;
-      setDisplayText(plot[0]);
-      setIsTyping(true);
-
-      typingInterval.current = setInterval(() => {
-        if (i+1 < plot.length) {
-          setDisplayText((prev) => prev + plot[i]);
-          i++;
-        } else {
-          clearInterval(typingInterval.current);
-          setIsTyping(false);
-        }
-      }, 50);
-
-      return () => clearInterval(typingInterval.current);
+     //whole code on request available
     }
   }, [plot]);
 
