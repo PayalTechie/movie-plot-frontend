@@ -9,7 +9,7 @@ const GeneratedPlot = ({ plot }) => {
 
   useEffect(() => {
     if (plot) {
-     //whole code on request available
+     //changes here
     }
   }, [plot]);
 
